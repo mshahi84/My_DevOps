@@ -23,11 +23,8 @@
    81  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git"
    84  git init
    85  git pull https://github.com/MyTestLab1/DevOpsRepo01.git
-   91  ansible-doc file
    92  ansible client -m file -a "name=/root/my_project state=directory"
-   93  ansible client -m git "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project"
    94  ansible client -m git "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project version=HEAD"
-   95  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project"
    96  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project version=HEAD"
    97  ansible client -m file -a "name=/tmp/my_project state=directory"
    98  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/tmp/my_project version=HEAD"
