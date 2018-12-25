@@ -21,7 +21,6 @@
    78  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git"
    80  ansible client -m yum -a "name=git state=present"
    81  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git"
-   84  git init
    85  git pull https://github.com/MyTestLab1/DevOpsRepo01.git
    92  ansible client -m file -a "name=/root/my_project state=directory"
    94  ansible client -m git "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project version=HEAD"
