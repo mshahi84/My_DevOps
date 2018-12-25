@@ -1,0 +1,34 @@
+   25  ansible ping Client-Group1
+   26  ansible -m ping Client-Group1
+   27  man ansible
+   28  vi /etc/ansible/hosts
+   29  ansible -m ping Client-Group1
+   30  vi /etc/ansible/hosts
+   39  ansible -m command
+   47  ansible-doc command
+   48  ansible Client-Group1 -m user -a "name=test password=123456"
+   49  ansible-doc user
+   53  ansible Client-Group1 -m user -a "name=test state=absent"
+   57  ansible client -m yum -a "name=vsftpd state=present"
+   58  ansible client -m service -a "name=vsftpd state=started"
+   65  ansible client -m service -a "name=vsftpd enabled=yes"
+   67  ansible client -m copy -a "src=/etc/fstab dest=/tmp/"
+   68  ansible-doc copy
+   72  #ansible client -m copy -a "mode=/etc/fstab dest=/tmp/"
+   74  #ansible client -m copy -a "mode=600 dest=/tmp/fstab"
+   75  ansible client -m copy -a "mode=600 dest=/tmp/fstab"
+   77  ansible client -m file -a "mode=600 dest=/tmp/fstab"
+   78  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git"
+   80  ansible client -m yum -a "name=git state=present"
+   81  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git"
+   84  git init
+   85  git pull https://github.com/MyTestLab1/DevOpsRepo01.git
+   91  ansible-doc file
+   92  ansible client -m file -a "name=/root/my_project state=directory"
+   93  ansible client -m git "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project"
+   94  ansible client -m git "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project version=HEAD"
+   95  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project"
+   96  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/root/my_project version=HEAD"
+   97  ansible client -m file -a "name=/tmp/my_project state=directory"
+   98  ansible client -m git -a "repo=https://github.com/MyTestLab1/DevOpsRepo01.git dest=/tmp/my_project version=HEAD"
+
